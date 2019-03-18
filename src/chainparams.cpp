@@ -377,7 +377,7 @@ public:
         consensus.nBudgetPaymentsWindowBlocks = 2100000000;       // Disabled
         consensus.nSuperblockStartBlock = 2100000000;             // Disabled
         consensus.nSuperblockStartHash = uint256();
-        consensus.nSuperblockCycle = 2100000000;   
+        consensus.nSuperblockCycle = 2100000000;
         consensus.nGovernanceMinQuorum = 1;
         consensus.nGovernanceFilterElements = 500;
         consensus.nMasternodeMinimumConfirmations = 1;
@@ -620,7 +620,6 @@ public:
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1549069202, 1, 0x207fffff, 1, 50 * COIN);
-
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x000008ca1832a4baf228eb1553c03d3a2c8e02399550dd6ea8d65cec3ef23d2e"));
         assert(genesis.hashMerkleRoot == uint256S("0xff028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662ff"));
@@ -707,8 +706,7 @@ public:
         consensus.nBudgetPaymentsWindowBlocks = 2100000000;       // Disabled
         consensus.nSuperblockStartBlock = 2100000000;             // Disabled
         consensus.nSuperblockStartHash = uint256();
-        consensus.nSuperblockCycle = 2100000000;    
-        consensus.nSuperblockCycle = 10;
+        consensus.nSuperblockCycle = 2100000000;
         consensus.nGovernanceMinQuorum = 1;
         consensus.nGovernanceFilterElements = 100;
         consensus.nMasternodeMinimumConfirmations = 1;
@@ -803,7 +801,7 @@ if (false) {
         fRequireRoutableExternalIP = false;
         fMineBlocksOnDemand = true;
         fAllowMultipleAddressesFromGroup = true;
-       fAllowMultiplePorts = true;
+        fAllowMultiplePorts = true;
 
         nFulfilledRequestExpireTime = 5*60; // fulfilled requests expire in 5 minutes
 
@@ -817,7 +815,6 @@ if (false) {
         // founder address & fee
         strFounderAddress = "ufoReg11EUpkCNvKLgQpYnH7FtesEwTcSi";
         dFounderFee = 0.01;     // 1%           Not Used
-
 
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of

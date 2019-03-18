@@ -309,6 +309,7 @@ uint256 SerializeHashYespower(const T& obj, int nType=SER_GETHASH, int nVersion=
     return ss.GetHash();
 }
 
+
 unsigned int MurmurHash3(unsigned int nHashSeed, const std::vector<unsigned char>& vDataToHash);
 
 void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char header, const unsigned char data[32], unsigned char output[64]);
