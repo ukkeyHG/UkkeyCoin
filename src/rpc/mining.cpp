@@ -139,6 +139,7 @@ if( pblock->nNonce == 0){
             if( pblock->nNonce % 200 == 0){
                 LogPrintf("generateBlocks -- %d, %s \n", pblock->nNonce, pblock->GetHash().ToString().c_str() );
             }
+
             ++pblock->nNonce;
             --nMaxTries;
         }
@@ -719,7 +720,7 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
     // Added founder's reward, by ukkeyHG
     CAmount blockValue = (int64_t)pblock->vtx[0]->GetValueOut();
     CAmount founderPayment = GetFounderPayment(pindexPrev->nHeight + 1, blockValue);
-   if (founderPayment > 0) {
+    if (founderPayment > 0) {
         UniValue founderPaymentObj(UniValue::VOBJ);
         founderPaymentObj.push_back(Pair("founderpayee", Params().FounderAddress().c_str()));
         founderPaymentObj.push_back(Pair("founderamount", founderPayment));

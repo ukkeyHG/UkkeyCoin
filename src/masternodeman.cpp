@@ -1947,12 +1947,8 @@ void CMasternodeMan::WarnMasternodeDaemonUpdates()
     }
 
     // Warn only when at least half of known masternodes already updated
-    if (nUpdatedMasternodes < size() / 2.0 ){
-LogPrintf("========================================== OK \n");
+    if (nUpdatedMasternodes < size() / 2.0)
         return;
-    }else{
-LogPrintf("========================================== NG \n");
-    }
 
     std::string strWarning;
     if (nUpdatedMasternodes != size()) {
